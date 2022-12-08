@@ -7,6 +7,7 @@ import { HelloComponent } from './hello.component';
 import { ListComponent } from './components/list/list.component';
 import { RandomComponent } from './components/random/random.component';
 import { RandomService } from './services/random.service';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ListService } from './services/list.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
@@ -17,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -32,6 +34,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSnackBarModule,
     MatSlideToggleModule,
     MatChipsModule,
+    MatToolbarModule,
+    BrowserAnimationsModule,
   ],
   declarations: [AppComponent, HelloComponent, ListComponent, RandomComponent],
   bootstrap: [AppComponent],

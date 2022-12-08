@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ListService } from '../../services/list.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { Todo } from '../../interface/todo';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -8,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ListComponent implements OnInit {
   todoForm: FormGroup;
+  todos: Observable<Todo[]>;
 
   constructor(private service: ListService, private formBuilder: FormBuilder) {}
 
@@ -15,6 +18,7 @@ export class ListComponent implements OnInit {
     this.todoForm = this.formBuilder.group({
       todo: ['', Validators.required],
     });
+    this.todos = this.service.todos;
   }
   addItem() {
     this.service.create({
@@ -22,5 +26,9 @@ export class ListComponent implements OnInit {
       completed: false,
     });
     this.todoForm.reset();
+  }
+
+  deleteItem(todoId: number) {
+    this.service.delete(todoId);
   }
 }

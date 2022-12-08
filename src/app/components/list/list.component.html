@@ -11,8 +11,23 @@
       />
     </mat-form-field>
     <span class="example-spacer"></span>
-    <button mat-button [disabled]="todoForm.invalid" (click)="addItem()">
+    <button
+      mat-button
+      [disabled]="todoForm.invalid"
+      (click)="addItem()"
+      color="primary"
+    >
       Add
     </button>
   </div>
+
+  <mat-toolbar
+    *ngFor="let todo of todos | async; let i = index"
+    color="primary"
+  >
+    <span>{{ todo.value }}</span>
+
+    <span class="example-spacer"></span>
+    <mat-icon class="btn" (click)="deleteItem(todo.id)"> delete </mat-icon>
+  </mat-toolbar>
 </mat-card>
