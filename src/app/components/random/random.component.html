@@ -1,6 +1,8 @@
-<table mat-table>
+<mat-card mat-table>
   <ng-container>Random component (max= 100)</ng-container>
-  <span [(ngModel)]="randomNumber"></span>
+  <span>{{ randomNumber }}</span>
 
-  <button (click)="generateRandomNumbers()" color="primary">Losuj</button>
-</table>
+  <button mat-raised-button (click)="generateRandomNumbers()" color="primary">
+    Losuj
+  </button>
+</mat-card>

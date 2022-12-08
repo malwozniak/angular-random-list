@@ -1,33 +1,37 @@
-<span>To do list:</span>
 <mat-card>
-  <div [formGroup]="todoForm">
-    <mat-form-field class="full-width">
-      <input
-        matInput
-        formControlName="todo"
-        placeholder="Enter To do"
-        class="textareafull"
-        name="inputValue"
-      />
-    </mat-form-field>
-    <span class="example-spacer"></span>
-    <button
-      mat-button
-      [disabled]="todoForm.invalid"
-      (click)="addItem()"
-      color="primary"
-    >
-      Add
-    </button>
-  </div>
+  <mat-card-content>
+    <span class="main-text">To do list:</span>
 
-  <mat-toolbar
-    *ngFor="let todo of todos | async; let i = index"
-    color="primary"
-  >
-    <span>{{ todo.value }}</span>
+    <div [formGroup]="todoForm">
+      <mat-form-field class="full-width">
+        <input
+          matInput
+          formControlName="todo"
+          placeholder="Enter To do"
+          class="textareafull"
+          name="inputValue"
+        />
+      </mat-form-field>
+      <span class="example-spacer"></span>
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="todoForm.invalid"
+        (click)="addItem()"
+        class="button-add"
+      >
+        Add
+      </button>
+    </div>
 
-    <span class="example-spacer"></span>
-    <mat-icon class="btn" (click)="deleteItem(todo.id)"> delete </mat-icon>
-  </mat-toolbar>
+    <mat-list *ngFor="let todo of todos | async; let i = index" color="primary">
+      <mat-list-item>
+        <span class="valueTodo">{{ todo.value }}</span>
+
+        <button mat-button class="button-delete" (click)="deleteItem(todo.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
 </mat-card>

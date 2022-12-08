@@ -1,0 +1,17 @@
+.valueTodo {
+  padding: 2rem;
+}
+
+.button-add {
+  color: #f0fff3 !important;
+  background-color: #191780 !important;
+}
+.mat-raised-button
+ {
+  justify-content: center;
+}
+
+.button-delete {
+  color: #f0fff3 !important;
+  background-color: rgba(163, 0, 0, 0.774) !important;
+}
