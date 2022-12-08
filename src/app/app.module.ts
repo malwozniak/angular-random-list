@@ -7,9 +7,20 @@ import { HelloComponent } from './hello.component';
 import { ListComponent } from '../list/list.component';
 import { RandomComponent } from './random/random.component';
 import { RandomService } from './random/random.service';
-
+import {
+  MatCardModule, MatListModule, MatButtonModule, MatInputModule, MatExpansionModule, MatToolbarModule, MatIconModule, MatSnackBarModule, MatSlideToggleModule, MatChipsModule
+} from '@angular/material';
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, MatCardModule,
+    MatListModule,
+    MatButtonModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSnackBarModule,
+    MatSlideToggleModule,
+    MatChipsModule],
   declarations: [AppComponent, HelloComponent, ListComponent, RandomComponent],
   bootstrap: [AppComponent],
   providers: [RandomService],
