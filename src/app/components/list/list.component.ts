@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListService } from './list.service';
-import { Todo } from '../../models/todo';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { ListService } from '../../services/list.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-list',
