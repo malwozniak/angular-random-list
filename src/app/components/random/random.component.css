@@ -7,6 +7,7 @@
   justify-content: center;
   align-self: center;
   padding: 0 1rem;
+  content: ' ';
 }
 
 .mat-mdc-card {
@@ -16,8 +17,18 @@
 
 .positive {
   color: green;
+  content: ' ';
 }
-
+.positive::after {
+  content: 'Generate lower number';
+  color: green;
+}
 .negative {
+  color: red;
+  content: ' ';
+
+}
+.negative::after {
+  content: 'Generate uppper number';
   color: red;
 }
