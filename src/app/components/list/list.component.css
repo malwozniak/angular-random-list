@@ -14,3 +14,10 @@
 .mat-mdc-list-base {
   border-bottom: 2px dotted #2826bbab;
 }
+
+.mat-mdc-list-item .mdc-list-item__primary-text {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}

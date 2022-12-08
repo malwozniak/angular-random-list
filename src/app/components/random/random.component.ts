@@ -8,6 +8,7 @@ import { RandomService } from '../../services/random.service';
 })
 export class RandomComponent {
   constructor(private service: RandomService) {}
+  showit: boolean;
   randomNumber: number;
   max: number = 100;
   min: number = 1;
