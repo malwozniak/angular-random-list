@@ -8,9 +8,10 @@
   margin-top: 20px;
 }
 
-body {
-  font-family: 'Courier New', Courier, monospace;
-}
 .main-text {
   font-weight: 700;
+}
+
+* {
+  font-family: 'Courier New', Courier, monospace;
 }

@@ -28,7 +28,11 @@
       <mat-list-item>
         <span class="valueTodo">{{ todo.value }}</span>
 
-        <button mat-button class="button-delete" (click)="deleteItem(todo.id)">
+        <button
+          mat-stroked-button
+          class="button-delete"
+          (click)="deleteItem(todo.id)"
+        >
           <mat-icon>delete</mat-icon>
         </button>
       </mat-list-item>
