@@ -15,5 +15,9 @@ export class RandomComponent {
 
   generateRandomNumbers() {
     this.randomNumber = this.service.generateRandomNumber(this.min, this.max);
+
+    if(this.randomNumber < 50){
+      
+    }
   }
 }
