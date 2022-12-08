@@ -13,3 +13,11 @@
   display: flex;
   flex-flow: row;
 }
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}

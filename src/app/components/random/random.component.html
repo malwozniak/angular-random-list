@@ -1,6 +1,8 @@
 <mat-card mat-table>
-  <ng-container>Random component (max={{max}})</ng-container>
-  <span class="score">{{ randomNumber }}</span>
+  <ng-container>Random component (max={{ max }})</ng-container>
+  <span [ngClass]="randomNumber < 50 ? 'positive' : 'negative'" class="score">{{
+    randomNumber
+  }}</span>
 
   <button
     mat-raised-button
