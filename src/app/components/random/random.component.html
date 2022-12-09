@@ -1,16 +1,16 @@
 <mat-card mat-table>
-  <ng-container>Random component (max={{ max }})</ng-container>
-  <span class="score">{{ randomNumber }}</span>
-  <span
-    [ngClass]="randomNumber < 50 ? 'positive' : 'negative'"
-  ></span>
-  <div class="timeline-item"></div>
-  <button
-    mat-raised-button
-    class="random-btn"
-    (click)="generateRandomNumbers()"
-    color="primary"
-  >
-    Losuj
-  </button>
+  <mat-card-content>
+    <ng-container>Random component (max={{ max }})</ng-container>
+    <span class="score">{{ randomNumber }}</span>
+    <p class="text" [ngClass]="randomNumber < 50 ? 'positive' : 'negative'"></p>
+    <div class="timeline-item"></div>
+    <button
+      mat-raised-button
+      class="random-btn"
+      (click)="generateRandomNumbers()"
+      color="primary"
+    >
+      Losuj
+    </button>
+  </mat-card-content>
 </mat-card>
