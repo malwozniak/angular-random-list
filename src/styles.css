@@ -16,9 +16,15 @@
 * {
   font-family: 'Courier New', Courier, monospace;
 }
-
+@media (min-width: 800px) {
+  .mdc-card {
+    margin: 3vw 10vw;
+  }
+}
 .mat-mdc-card-content,
 .mdc-card {
   border: 2px solid black;
+}
+.mdc-card {
   margin-top: 10px;
 }

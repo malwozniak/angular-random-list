@@ -16,6 +16,7 @@ export class RandomComponent {
   ngOnInit() {}
 
   generateRandomNumbers() {
+    this.showit = true;
     this.randomNumber = this.service.generateRandomNumber(
       this.min,
       Number(this.max)

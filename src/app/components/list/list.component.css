@@ -5,7 +5,7 @@
 .button-delete {
   color: #f0fff3 !important;
   background-color: rgba(163, 0, 0, 0.774) !important;
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
 }
 .mat-mdc-card-content > :last-child:not(.mat-mdc-card-footer) {
   border-bottom: 2px solid #2826bbab;
@@ -15,9 +15,15 @@
   border-bottom: 2px dotted #2826bbab;
 }
 
-.mat-mdc-list-item .mdc-list-item__primary-text {
+ul {
   display: inline-flex;
   justify-content: space-between;
-  width: 100%;
+  width: 70vw;
   align-items: center;
+}
+.mat-mdc-list-item .mdc-list-item__primary-text {
+  display: flex !important;
+}
+.item_flex {
+  display: flex !important;
 }
