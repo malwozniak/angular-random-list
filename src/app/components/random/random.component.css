@@ -16,6 +16,7 @@
   display: flex;
   flex-flow: row;
 }
+
 .mat-mdc-card-content {
   width: 100%;
   display: grid;
