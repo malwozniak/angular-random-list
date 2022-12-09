@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RandomService } from '../../services/random.service';
 
 @Component({
@@ -8,13 +8,17 @@ import { RandomService } from '../../services/random.service';
 })
 export class RandomComponent {
   constructor(private service: RandomService) {}
+  @Input() max: string;
   showit: boolean;
   randomNumber: number;
-  max: number = 100;
+
   min: number = 1;
   ngOnInit() {}
 
   generateRandomNumbers() {
-    this.randomNumber = this.service.generateRandomNumber(this.min, this.max);
+    this.randomNumber = this.service.generateRandomNumber(
+      this.min,
+      Number(this.max)
+    );
   }
 }
