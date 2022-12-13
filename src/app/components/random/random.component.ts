@@ -8,9 +8,9 @@ import { RandomService } from '../../services/random.service';
 })
 export class RandomComponent {
   constructor(private service: RandomService) {}
-  @Input() max: string;
+  @Input() max: any;
   showit: boolean;
-  randomNumber: number;
+  randomNumber: any;
 
   min: number = 1;
   ngOnInit() {}
